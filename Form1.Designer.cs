@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(46, 48);
+            this.lblUserName.Location = new System.Drawing.Point(60, 112);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(55, 13);
             this.lblUserName.TabIndex = 0;
@@ -50,7 +51,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(46, 89);
+            this.lblPassword.Location = new System.Drawing.Point(60, 153);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 1;
@@ -58,21 +59,22 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(122, 45);
+            this.txtUserName.Location = new System.Drawing.Point(161, 109);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
             this.txtUserName.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(122, 82);
+            this.txtPassword.Location = new System.Drawing.Point(161, 150);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(49, 143);
+            this.btnLogin.Location = new System.Drawing.Point(61, 207);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -82,7 +84,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(174, 143);
+            this.btnExit.Location = new System.Drawing.Point(186, 207);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 5;
@@ -90,30 +92,39 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel1
+            // bunifuGradientPanel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.txtUserName);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.lblUserName);
-            this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Location = new System.Drawing.Point(41, 84);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 257);
-            this.panel1.TabIndex = 6;
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.txtUserName);
+            this.bunifuGradientPanel1.Controls.Add(this.lblUserName);
+            this.bunifuGradientPanel1.Controls.Add(this.btnExit);
+            this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
+            this.bunifuGradientPanel1.Controls.Add(this.lblPassword);
+            this.bunifuGradientPanel1.Controls.Add(this.btnLogin);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Yellow;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.DodgerBlue;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Red;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(346, 430);
+            this.bunifuGradientPanel1.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 436);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(346, 430);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "Form1";
             this.Text = "Admin Panel";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -126,7 +137,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panel1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
     }
 }
 
